@@ -1,0 +1,32 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: uber-hasher-api
+  labels:
+    app: uber-hasher
+
+spec:
+  replicas: 3
+
+  selector:
+    matchLabels:
+      app: uber-hasher
+
+  template:
+    metadata:
+      labels:
+        app: uber-hasher
+
+    spec:
+      containers:
+        - name: uber-hasher-api
+          image: <<image_name>>
+
+          env:
+            - name: APP_ROOT
+              value: 8080
+
+          ports:
+            - containerPort: 8080

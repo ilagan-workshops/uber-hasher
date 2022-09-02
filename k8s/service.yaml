@@ -4,6 +4,7 @@ kind: Service
 
 metadata:
   name: uber-hasher-api
+  namespace: uber-hasher
 
 spec:
   type: LoadBalancer

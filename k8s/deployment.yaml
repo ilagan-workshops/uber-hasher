@@ -4,6 +4,7 @@ kind: Deployment
 
 metadata:
   name: uber-hasher-api
+  namespace: uber-hasher
   labels:
     app: uber-hasher
 

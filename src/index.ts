@@ -17,9 +17,9 @@ const options = {
 const server = initializeServer(options)
 
 server.on('listening', () => {
-	console.log('Server listening.')
+	console.log(`Server listening on port ${HOST}:${PORT}.`)
 })
 
 server.on('error', (error) => {
-	console.error('Error encountered: ${error}')
+	console.error(`Error encountered: ${error}`)
 })

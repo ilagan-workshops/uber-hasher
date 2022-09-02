@@ -9,7 +9,7 @@ metadata:
     app: uber-hasher
 
 spec:
-  replicas: 3
+  replicas: 1
 
   selector:
     matchLabels:
@@ -34,6 +34,4 @@ spec:
 
           resources:
             requests:
-              cpu: 250m
-            limits:
-              cpu: 250m
+              cpu: 1000m

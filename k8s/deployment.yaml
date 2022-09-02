@@ -20,13 +20,21 @@ spec:
         app: uber-hasher
 
     spec:
+      resources:
+        requests:
+          cpu: 250m
+
       containers:
         - name: uber-hasher-api
-          image: <<image_name>>
+          image: richardneililagan/uber-hasher
 
           env:
             - name: APP_ROOT
-              value: 8080
+              value: '8080'
 
           ports:
             - containerPort: 8080
+
+          resources:
+            limits:
+              cpu: 250m
